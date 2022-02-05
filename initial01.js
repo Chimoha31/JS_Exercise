@@ -52,3 +52,16 @@ const today2 = (date = new Date()) => {
   return `${date2} / ${month2} / ${year2}`;
 }
 console.log(today2());
+
+// 5, Write a JS program to create a new string adding "New!" in front of a given string.
+// If the given string begins with "New!" already then return the original string.
+
+const newAdd = (str) => {
+  return str.indexOf('NEW!') === 0 ? str : `NEW! ${str}`;
+}
+console.log(newAdd("Cosmetic Line."));
+console.log(newAdd("New! This is renovated."));
+console.log(newAdd("Water server."));
+console.log(newAdd("New! hike trail."));
+
+
