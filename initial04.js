@@ -51,6 +51,7 @@ console.log(randomeHxadecimalColor());
 
 //5, Write a JS function that returns true if the provided predicate funtion returns true for all elements in a collection, false otherwise.
 
+// solution1
 // const matchArr = (arr) => {
 //   return arr.every(x => x < 6)
 // }
