@@ -42,3 +42,34 @@ stu, vwx,byza`;
 
 console.log(convertCSV(strForParam));
 
+//4, Write a JS program to generate a random hexadecimal color code.
+const randomeHxadecimalColor = () => "#" + Math.floor(Math.random() * 16777215).toString(16);
+
+console.log(randomeHxadecimalColor());
+console.log(randomeHxadecimalColor());
+console.log(randomeHxadecimalColor());
+
+//5, Write a JS function that returns true if the provided predicate funtion returns true for all elements in a collection, false otherwise.
+
+// const matchArr = (arr) => {
+//   return arr.every(x => x < 6)
+// }
+
+// solution2
+const everyEl = (array, fn) => {
+  for(let i = 0; i < array.length; i++) {
+    if(!fn(array[i])) {
+      return false
+    }
+  }
+  return true
+};
+
+// solution result1
+// console.log(matchArr([1,2,3,4,5]));
+// console.log(matchArr([1,2,3,4,5, 11]));
+
+// solution result2
+console.log(everyEl([1, 2, 3], (x) => x < 5));
+console.log(everyEl([1, 2, 3, 4, 5, 6], (x) => x < 5));
+console.log(everyEl([-3, 2, 1, 5, 4], (x) => x <= 5));
