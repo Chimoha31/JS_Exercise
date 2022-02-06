@@ -30,12 +30,23 @@ const orders = [
 // Exercises
 
 // 1) Get a list of the orders for the customer with the ID 234 that have not been delivered.
-
+const findCustomer = (person) => {
+   for(let i = 0; i < person.length; i++) {
+     if(person[i].customerId === '234' && person[i].delivered === false) {
+       return person[i]
+     }
+   }
+   return 'Not found'
+}
+console.log(findCustomer(orders));
 
 // 2) Create a new property on each order with the total price of items ordered.
 
 
 // 3) Have all the orders been delivered?
+
+  const isDelivered = orders.every((x) => x.delivered === true)
+  console.log(isDelivered);
 
 
 // 4) Has the customer with ID '123' made any orders?
